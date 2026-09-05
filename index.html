@@ -1,12 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='pt-BR'>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description'
+        content='WDD 131 – Fundamentos da Web Dinâmica. Marcelo Alves de Lima apresenta seus estudos em desenvolvimento de software, HTML, CSS e JavaScript.'>
+    <meta name='author' content='Marcelo Alves de Lima'>
+
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Marcelo Alves de Lima</title>
+
+    <link rel='stylesheet' href='estilos/base.css'>
+    <script src='scripts/obterdatas.js' defer></script>
 </head>
+
 <body>
-    <h1>Marcelo Alves</h1>
-    <p>Software Developer</p>
+
+    <header>
+        <h1>
+            <span>WDD 131 – Fundamentos da Web Dinâmica</span>
+        </h1>
+
+        <nav>
+            <a href='https://www.linkedin.com/in/celodelima/'>LinkedIn</a>
+            <a href='https://byupw.instructure.com/'>Canvas</a>
+            <a href='https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=por&id=p32-p33#p32'>
+                Escrituras
+            </a>
+            <a href='#'>Projeto Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Marcelo Alves de Lima</h1>
+
+        <section class='card'>
+            <h2>Sobre Mim</h2>
+
+            <img src='imagens/minha-foto.jpg' alt='Marcelo Alves de Lima'>
+
+            <p>
+                Sou estudante de Desenvolvimento de Software e estou desenvolvendo
+                minhas habilidades em programação e desenvolvimento web.
+            </p>
+        </section>
+
+        <section class='card'>
+            <h2>Desenvolvimento de Software</h2>
+
+            <img src='imagens/programacao.jpg' alt='Código de programação em uma tela'>
+
+            <p>
+                Neste curso estou aprendendo a criar páginas web utilizando HTML,
+                CSS e JavaScript, aplicando princípios de design, acessibilidade
+                e boas práticas de desenvolvimento.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id='anoatual'></span> Marcelo Alves de Lima - Paraná, Brasil
+        </p>
+
+        <p id='ultimaModificacao'></p>
+    </footer>
+
 </body>
+
 </html>

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --cor-principal: #17365d;
+    --cor-secundaria: #2f75b5;
+    --cor-destaque: #f2b134;
+    --cor-fundo: #f4f6f8;
+    --cor-branca: #ffffff;
+    --cor-texto: #222222;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+header span {
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+main > h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: var(--cor-principal);
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.card h2 {
+    grid-column: 1 / -1;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-principal);
+    border-bottom: 3px solid var(--cor-destaque);
+    padding-bottom: 0.5rem;
+}
+
+.card img {
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem;
+}
+
+@media screen and (max-width: 700px) {
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    nav a {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .card h2 {
+        grid-column: 1;
+    }
+
+    .card img {
+        margin: 0 auto;
+    }
+}
