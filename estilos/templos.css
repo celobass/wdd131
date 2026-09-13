@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #17365d;
+    --cor-secundaria: #2f6690;
+    --cor-destaque: #f2c14e;
+    --cor-fundo: #f4f7f9;
+    --cor-texto: #222;
+    --cor-branco: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.titulo-cabecalho {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+#menu {
+    background: none;
+    border: none;
+    color: var(--cor-branco);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav {
+    background-color: var(--cor-secundaria);
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+}
+
+.navigation.responsive {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: var(--cor-branco);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+main h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--cor-principal);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    margin: 0;
+    background-color: var(--cor-branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.3rem;
+}
