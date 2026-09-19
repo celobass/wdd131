@@ -105,6 +105,37 @@ main > h1 {
     font-size: 1rem;
 }
 
+/* Seção Minha Cidade */
+.local {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.local h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-principal);
+    margin-bottom: 1rem;
+}
+
+.local-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.local-conteudo img {
+    width: 100%;
+    max-width: none;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.local-conteudo p {
+    font-size: 1rem;
+}
+
 .recursos {
     grid-column: 1 / -1;
     display: flex;
@@ -163,5 +194,20 @@ footer p {
 
     .card img {
         margin: 0 auto;
+    }
+
+    /* Minha Cidade no celular */
+    .local {
+        grid-column: 1;
+    }
+
+    .local-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .local-conteudo img {
+        margin: 0 auto;
+        max-width: 100%;
     }
 }

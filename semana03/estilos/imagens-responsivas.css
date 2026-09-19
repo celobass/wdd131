@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+}

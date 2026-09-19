@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Imagens Responsivas</title>
+    <meta name='description' content='Exemplo de imagens responsivas com diferentes tamanhos e enquadramentos.'>
+    <link rel='stylesheet' href='estilos/imagens-responsivas.css'>
+</head>
+<body>
+    <header>
+        <h1>Templo de São Paulo Brasil</h1>
+    </header>
+
+    <main>
+        <div class='principal'>
+            <picture>
+                <source media='(min-width: 1000px)' srcset='imagens/principal-grande.webp'>
+                <source media='(min-width: 500px)' srcset='imagens/principal-media.webp'>
+                <img src='imagens/principal-pequena.webp'
+                    alt='Templo de São Paulo Brasil cercado por jardins e árvores'
+                    width='500'
+                    height='250'>
+            </picture>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id='ano-atual'></span> Templo de São Paulo</p>
+    </footer>
+</body>
+</html>
