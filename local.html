@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <meta name='description'
+        content='Conheça a Ilha do Mel, um dos destinos naturais mais encantadores do litoral do Paraná, com informações sobre localização, área, população e clima.'>
+
+    <meta name='author' content='Marcelo Alves de Lima'>
+
+    <title>Ilha do Mel - Paraná</title>
+
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+
+    <link
+        href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap'
+        rel='stylesheet'>
+
+    <link rel='stylesheet' href='estilos/local.css'>
+
+    <script src='scripts/local.js' defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ilha do Mel</h1>
+    </header>
+
+    <main>
+
+        <section class='imagem-principal'>
+
+            <picture>
+                <source
+                    media='(min-width: 700px)'
+                    srcset='imagens/ilha-do-mel-grande.webp'>
+
+                <img
+                    src='imagens/ilha-do-mel-pequena.webp'
+                    alt='Paisagem da Ilha do Mel com mar, montanhas, vegetação e uma passarela de madeira'>
+            </picture>
+
+        </section>
+
+        <div class='informacoes'>
+
+            <section class='dados card'>
+
+                <h2>Dados</h2>
+
+                <div class='dados-conteudo'>
+
+                    <p>
+                        <strong>Localização:</strong>
+                        Paraná, Brasil
+                    </p>
+
+                    <p>
+                        <strong>Região:</strong>
+                        Litoral do Paraná
+                    </p>
+
+                    <p>
+                        <strong>Município:</strong>
+                        Paranaguá
+                    </p>
+
+                    <p>
+                        <strong>Características:</strong>
+                        Praias, trilhas e áreas de preservação ambiental
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class='clima card'>
+
+                <h2>Clima</h2>
+
+                <img
+                    class='icone-clima'
+                    src='imagens/clima.svg'
+                    alt='Ícone representando o clima'>
+
+                <div class='clima-conteudo'>
+
+                    <p>
+                        <strong>Temperatura:</strong>
+                        <span id='temperatura'>8</span> °C
+                    </p>
+
+                    <p>
+                        <strong>Vento:</strong>
+                        <span id='vento'>12</span> km/h
+                    </p>
+
+                    <p>
+                        <strong>Sensação térmica:</strong>
+                        <span id='sensacao-termica'>--</span>
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <section class='sobre card'>
+
+            <h2>Sobre a Ilha do Mel</h2>
+
+            <p>
+                A Ilha do Mel está localizada no litoral do Paraná e é conhecida
+                por suas paisagens naturais, praias, trilhas e áreas de preservação.
+                O acesso à ilha é feito por embarcação, contribuindo para a
+                preservação de seu ambiente natural.
+            </p>
+
+            <p>
+                Entre os lugares mais conhecidos estão o Farol das Conchas,
+                a Fortaleza de Nossa Senhora dos Prazeres e a Gruta das Encantadas.
+                A ilha oferece diversas oportunidades para caminhadas, contato
+                com a natureza e apreciação das paisagens do litoral paranaense.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; <span id='anoatual'></span> Marcelo Alves de Lima - Paraná, Brasil
+        </p>
+
+        <p id='ultimaModificacao'></p>
+
+    </footer>
+
+</body>
+
+</html>

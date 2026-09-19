@@ -1,0 +1,194 @@
+:root {
+    --cor-principal: #145374;
+    --cor-secundaria: #1f7a8c;
+    --cor-destaque: #e9c46a;
+    --cor-fundo: #f4f7f5;
+    --cor-branca: #ffffff;
+    --cor-texto: #222222;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+/* IMAGEM PRINCIPAL */
+
+.imagem-principal {
+    margin-bottom: 2rem;
+}
+
+.imagem-principal picture,
+.imagem-principal img {
+    display: block;
+    width: 100%;
+}
+
+.imagem-principal img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ÁREA DE INFORMAÇÕES */
+
+.informacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* CARTÕES */
+
+.card {
+    background-color: var(--cor-branca);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-principal);
+    border-bottom: 3px solid var(--cor-destaque);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* DADOS */
+
+.dados-conteudo p,
+.clima-conteudo p {
+    margin-bottom: 0.7rem;
+}
+
+.dados-conteudo strong,
+.clima-conteudo strong {
+    color: var(--cor-principal);
+}
+
+/* CLIMA */
+
+.clima {
+    position: relative;
+}
+
+.clima-conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.icone-clima {
+    display: none;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1rem;
+}
+
+/* SEÇÃO SOBRE */
+
+.sobre {
+    margin-bottom: 2rem;
+}
+
+.sobre p {
+    margin-bottom: 1rem;
+}
+
+.sobre p:last-child {
+    margin-bottom: 0;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p {
+    margin: 0.3rem;
+}
+
+/* VISUALIZAÇÃO MOBILE */
+
+@media screen and (max-width: 699px) {
+
+    main {
+        width: 92%;
+        margin: 1.5rem auto;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .imagem-principal img {
+        height: 250px;
+    }
+
+    .informacoes {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .icone-clima {
+        display: block;
+    }
+
+    .clima h2::after {
+        content: '';
+    }
+}
+
+/* VISUALIZAÇÃO DESKTOP */
+
+@media screen and (min-width: 700px) {
+
+    .clima h2::after {
+        content: ' ☀️';
+        font-size: 1.5rem;
+    }
+
+    .icone-clima {
+        display: none;
+    }
+
+    .dados,
+    .clima {
+        min-height: 240px;
+    }
+}
