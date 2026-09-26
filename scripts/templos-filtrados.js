@@ -133,25 +133,25 @@ function filtrarTemplos(filtro) {
         templosFiltrados = templos;
     }
 
-    if (filtro === 'antigos') {
+    if (filtro === 'antigo') {
         templosFiltrados = templos.filter((templo) => {
             return parseInt(templo.consagracao) < 1900;
         });
     }
 
-    if (filtro === 'novos') {
+    if (filtro === 'novo') {
         templosFiltrados = templos.filter((templo) => {
             return parseInt(templo.consagracao) > 2000;
         });
     }
 
-    if (filtro === 'grandes') {
+    if (filtro === 'grande') {
         templosFiltrados = templos.filter((templo) => {
             return templo.area > 90000;
         });
     }
 
-    if (filtro === 'pequenos') {
+    if (filtro === 'pequeno') {
         templosFiltrados = templos.filter((templo) => {
             return templo.area < 10000;
         });
@@ -171,20 +171,20 @@ document.querySelectorAll('.navigation a').forEach((link) => {
             filtrarTemplos('todos');
         }
 
-        if (filtro === 'antigos') {
-            filtrarTemplos('antigos');
+        if (filtro === 'antigo') {
+            filtrarTemplos('antigo');
         }
 
-        if (filtro === 'novos') {
-            filtrarTemplos('novos');
+        if (filtro === 'novo') {
+            filtrarTemplos('novo');
         }
 
-        if (filtro === 'grandes') {
-            filtrarTemplos('grandes');
+        if (filtro === 'grande') {
+            filtrarTemplos('grande');
         }
 
-        if (filtro === 'pequenos') {
-            filtrarTemplos('pequenos');
+        if (filtro === 'pequeno') {
+            filtrarTemplos('pequeno');
         }
     });
 });
