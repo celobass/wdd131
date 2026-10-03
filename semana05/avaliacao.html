@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Confirmação de envio da avaliação do produto'>
+    <meta name='author' content='Marcelo Alves de Lima'>
+    <title>Avaliação Enviada</title>
+
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap' rel='stylesheet'>
+
+    <link rel='stylesheet' href='estilos/formulario.css'>
+
+    <script>
+        let contador = Number(localStorage.getItem('contadorAvaliacoes')) || 0;
+
+        contador++;
+
+        localStorage.setItem('contadorAvaliacoes', contador);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('#contador').textContent = contador;
+
+            document.querySelector('#anoatual').textContent =
+                new Date().getFullYear();
+
+            document.querySelector('#ultimaModificacao').textContent =
+                document.lastModified;
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Avaliação Enviada</h1>
+    </header>
+
+    <main>
+        <section class='confirmacao'>
+            <h2>Obrigado pela sua avaliação!</h2>
+
+            <p>Sua avaliação foi enviada com sucesso.</p>
+
+            <p>
+                Número de avaliações concluídas:
+                <strong id='contador'>0</strong>
+            </p>
+
+            <p>
+                <a href='formulario.html'>Voltar ao formulário</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id='anoatual'></span> Marcelo Alves de Lima - Ponta Grossa, Paraná</p>
+        <p>Última modificação: <span id='ultimaModificacao'></span></p>
+    </footer>
+</body>
+
+</html>

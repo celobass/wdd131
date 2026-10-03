@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Formulário de avaliação de produto'>
+    <meta name='author' content='Marcelo Alves de Lima'>
+    <title>Avaliação de Produto</title>
+
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap' rel='stylesheet'>
+
+    <link rel='stylesheet' href='estilos/formulario.css'>
+    <script src='scripts/formulario.js' defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Avaliação de Produto</h1>
+    </header>
+
+    <main>
+        <form method='get' action='avaliacao.html'>
+            <fieldset>
+                <legend>Informações do Produto</legend>
+
+                <label for='produto'>Nome do Produto</label>
+                <select id='produto' name='produto' required>
+                    <option value='' disabled selected>Selecione um Produto...</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Classificação Geral</legend>
+
+                <div class='estrelas'>
+                    <div>
+                        <input type='radio' id='estrela1' name='classificacao' value='1' required>
+                        <label for='estrela1'>☆</label>
+                    </div>
+
+                    <div>
+                        <input type='radio' id='estrela2' name='classificacao' value='2' required>
+                        <label for='estrela2'>☆</label>
+                    </div>
+
+                    <div>
+                        <input type='radio' id='estrela3' name='classificacao' value='3' required>
+                        <label for='estrela3'>☆</label>
+                    </div>
+
+                    <div>
+                        <input type='radio' id='estrela4' name='classificacao' value='4' required>
+                        <label for='estrela4'>☆</label>
+                    </div>
+
+                    <div>
+                        <input type='radio' id='estrela5' name='classificacao' value='5' required>
+                        <label for='estrela5'>☆</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Data de Instalação</legend>
+
+                <label for='data'>Data de instalação</label>
+                <input type='date' id='data' name='data' required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Recursos Úteis</legend>
+                <p>Selecione todos os recursos que você considerou úteis:</p>
+
+                <div class='checkbox-item'>
+                    <input type='checkbox' id='recurso1' name='recursos' value='facilidade'>
+                    <label for='recurso1'>Facilidade de uso</label>
+                </div>
+
+                <div class='checkbox-item'>
+                    <input type='checkbox' id='recurso2' name='recursos' value='desempenho'>
+                    <label for='recurso2'>Desempenho</label>
+                </div>
+
+                <div class='checkbox-item'>
+                    <input type='checkbox' id='recurso3' name='recursos' value='design'>
+                    <label for='recurso3'>Design</label>
+                </div>
+
+                <div class='checkbox-item'>
+                    <input type='checkbox' id='recurso4' name='recursos' value='durabilidade'>
+                    <label for='recurso4'>Durabilidade</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Avaliação Escrita</legend>
+
+                <label for='avaliacao'>Sua avaliação</label>
+                <textarea id='avaliacao' name='avaliacao' rows='6' placeholder='Escreva sua avaliação...'></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Nome de Usuário</legend>
+
+                <label for='usuario'>Nome de usuário</label>
+                <input type='text' id='usuario' name='usuario' autocomplete='name'>
+            </fieldset>
+
+            <input type='submit' value='Enviar Avaliação'>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id='anoatual'></span> Marcelo Alves de Lima - Ponta Grossa, Paraná</p>
+        <p>Última modificação: <span id='ultimaModificacao'></span></p>
+    </footer>
+</body>
+
+</html>
