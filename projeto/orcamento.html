@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Simule o custo de produção e o preço de venda de uma peça impressa em 3D com a demonstração do VyxelCore.'>
+    <meta name='author' content='VyxelCore'>
+    <title>Simular orçamento | VyxelCore</title>
+
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='estilos/style.css'>
+    <script src='scripts/main.js' defer></script>
+    <script src='scripts/orcamento.js' defer></script>
+</head>
+<body>
+    <header class='cabecalho'>
+        <div class='container cabecalho-conteudo'>
+            <a class='logo' href='index.html' aria-label='VyxelCore - página inicial'>
+                Vyxel<span>Core</span>
+            </a>
+
+            <button class='menu-botao' id='menu-botao'
+                type='button' aria-expanded='false'
+                aria-controls='menu-principal'>
+                Menu
+            </button>
+
+            <nav class='menu' id='menu-principal' aria-label='Navegação principal'>
+                <a href='index.html'>Início</a>
+                <a href='funcionalidades.html'>Funcionalidades</a>
+                <a href='orcamento.html' aria-current='page'>Simular orçamento</a>
+                <a class='btn' href='#simulador'>Experimentar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class='hero'>
+            <div class='container'>
+                <span class='selo'>Demonstração interativa</span>
+                <h1>Descubra quanto custa produzir sua peça.</h1>
+                <p>
+                    Informe os dados da impressão para estimar o custo de
+                    produção, o preço de venda e o lucro previsto.
+                </p>
+            </div>
+        </section>
+
+        <section class='secao' id='simulador'>
+            <div class='container'>
+                <div class='texto-centro'>
+                    <h2>Simulador de custos de impressão 3D</h2>
+                    <p>
+                        Preencha os campos abaixo. Os resultados são estimativas
+                        para fins de demonstração.
+                    </p>
+                </div>
+
+                <form class='formulario' id='form-orcamento'>
+                    <div class='campo'>
+                        <label for='nome-peca'>Nome da peça</label>
+                        <input id='nome-peca' name='nomePeca'
+                            type='text' maxlength='80'
+                            placeholder='Ex.: Suporte para celular'
+                            required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='material'>Material</label>
+                        <select id='material' name='material' required>
+                            <option value='pla'>PLA</option>
+                            <option value='petg'>PETG</option>
+                            <option value='abs'>ABS</option>
+                            <option value='tpu'>TPU</option>
+                        </select>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='preco-kg'>Preço do filamento (R$/kg)</label>
+                        <input id='preco-kg' name='precoKg'
+                            type='number' min='0.01' max='10000'
+                            step='0.01' value='100' required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='peso'>Peso utilizado por peça (gramas)</label>
+                        <input id='peso' name='peso'
+                            type='number' min='0.1' max='10000'
+                            step='0.1' value='85' required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='tempo'>Tempo de impressão por peça (horas)</label>
+                        <input id='tempo' name='tempo'
+                            type='number' min='0.01' max='1000'
+                            step='0.01' value='4.33' required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='potencia'>Potência média da impressora (watts)</label>
+                        <input id='potencia' name='potencia'
+                            type='number' min='1' max='5000'
+                            step='1' value='150' required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='energia'>Preço da energia (R$/kWh)</label>
+                        <input id='energia' name='energia'
+                            type='number' min='0.01' max='100'
+                            step='0.01' value='0.85' required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='custo-hora'>Custo de máquina por hora (R$)</label>
+                        <input id='custo-hora' name='custoHora'
+                            type='number' min='0' max='10000'
+                            step='0.01' value='2' required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='perdas'>Percentual para perdas (%)</label>
+                        <input id='perdas' name='perdas'
+                            type='number' min='0' max='100'
+                            step='0.1' value='5' required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='quantidade'>Quantidade de peças</label>
+                        <input id='quantidade' name='quantidade'
+                            type='number' min='1' max='10000'
+                            step='1' value='1' required>
+                    </div>
+
+                    <div class='campo'>
+                        <label for='margem'>Margem desejada sobre o preço de venda (%)</label>
+                        <input id='margem' name='margem'
+                            type='number' min='0' max='90'
+                            step='1' value='40' required>
+                    </div>
+
+                    <button type='submit'>Calcular orçamento</button>
+                    <p id='mensagem-formulario' role='status' aria-live='polite'></p>
+                </form>
+
+                <section class='resultado' id='resultado-orcamento'
+                    aria-labelledby='titulo-resultado' aria-live='polite' hidden>
+                    <h2 id='titulo-resultado'>Resultado da simulação</h2>
+                    <div id='detalhes-resultado'></div>
+                    <button id='salvar-orcamento' type='button'>
+                        Salvar orçamento neste dispositivo
+                    </button>
+                    <p id='mensagem-salvamento' role='status' aria-live='polite'></p>
+                </section>
+            </div>
+        </section>
+
+        <section class='secao secao-fundo'>
+            <div class='container'>
+                <div class='chamada'>
+                    <h2>Organize sua produção com mais clareza</h2>
+                    <p>
+                        Esta calculadora é uma demonstração acadêmica da proposta
+                        do VyxelCore. Os valores dependem dos dados informados
+                        e não substituem uma análise completa dos custos.
+                    </p>
+                    <a class='btn' href='funcionalidades.html'>
+                        Conhecer as funcionalidades
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class='rodape'>
+        <div class='container rodape-conteudo'>
+            <div>
+                <a class='logo' href='index.html' style='color: white;'>
+                    Vyxel<span>Core</span>
+                </a>
+                <p>Organização e clareza para a impressão 3D.</p>
+            </div>
+
+            <p><a href='referencias.html'>Referências e fontes</a></p>
+
+            <p>
+                &copy; <span id='ano-atual'>2026</span> VyxelCore.
+                Projeto em desenvolvimento.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

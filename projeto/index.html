@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Conheça o VyxelCore, uma proposta de gestão para impressão 3D que reúne custos, materiais, orçamentos e organização da produção.'>
+    <meta name='author' content='VyxelCore'>
+    <title>VyxelCore | Gestão para Impressão 3D</title>
+
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='estilos/style.css'>
+    <script src='scripts/main.js' defer></script>
+</head>
+<body>
+    <header class='cabecalho'>
+        <div class='container cabecalho-conteudo'>
+            <a class='logo' href='index.html' aria-label='VyxelCore - página inicial'>
+                Vyxel<span>Core</span>
+            </a>
+
+            <button class='menu-botao' id='menu-botao'
+                type='button' aria-expanded='false'
+                aria-controls='menu-principal'>
+                Menu
+            </button>
+
+            <nav class='menu' id='menu-principal' aria-label='Navegação principal'>
+                <a href='index.html' aria-current='page'>Início</a>
+                <a href='funcionalidades.html'>Funcionalidades</a>
+                <a href='orcamento.html'>Simular orçamento</a>
+                <a class='btn' href='orcamento.html'>Experimentar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class='hero'>
+            <div class='container hero-conteudo'>
+                <div class='hero-texto'>
+                    <span class='selo'>Gestão inteligente para impressão 3D</span>
+                    <h1>Transforme suas impressões 3D em um negócio mais organizado.</h1>
+                    <p>
+                        Tenha mais clareza sobre os custos de produção, organize
+                        seus orçamentos e prepare sua operação para crescer com
+                        o VyxelCore.
+                    </p>
+
+                    <div class='hero-acoes'>
+                        <a class='btn' href='orcamento.html'>Simular meus custos</a>
+                        <a class='btn btn-secundario' href='funcionalidades.html'>
+                            Conhecer funcionalidades
+                        </a>
+                    </div>
+                </div>
+
+                <div class='hero-visual'>
+                    <img
+                        src='imagens/impressao-3d.webp'
+                        alt='Impressora 3D produzindo uma peça camada por camada'
+                        width='800'
+                        height='640'
+                        fetchpriority='high'>
+                </div>
+            </div>
+        </section>
+
+        <section class='secao'>
+            <div class='container'>
+                <div class='texto-centro'>
+                    <span class='selo'>Mais controle, menos improviso</span>
+                    <h2>Decisões melhores começam com números claros</h2>
+                    <p>
+                        Conheça algumas das áreas que o VyxelCore pretende ajudar
+                        a organizar em uma operação de impressão 3D.
+                    </p>
+                </div>
+
+                <div class='grade'>
+                    <article class='card'>
+                        <span class='icone-card' aria-hidden='true'>R$</span>
+                        <h3>Controle de custos</h3>
+                        <p>
+                            Considere material, energia, tempo de máquina e
+                            perdas para estimar o custo de cada impressão.
+                        </p>
+                    </article>
+
+                    <article class='card'>
+                        <span class='icone-card' aria-hidden='true'>▤</span>
+                        <h3>Materiais organizados</h3>
+                        <p>
+                            Estruture as informações dos filamentos e acompanhe
+                            os valores usados nos seus cálculos.
+                        </p>
+                    </article>
+
+                    <article class='card'>
+                        <span class='icone-card' aria-hidden='true'>✓</span>
+                        <h3>Orçamentos mais claros</h3>
+                        <p>
+                            Use estimativas de produção para apoiar a formação
+                            de preços e a preparação de propostas comerciais.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class='secao secao-fundo'>
+            <div class='container'>
+                <div class='texto-centro'>
+                    <span class='selo'>Como funciona</span>
+                    <h2>Do custo à decisão em três etapas</h2>
+                </div>
+
+                <div class='etapas'>
+                    <article class='card'>
+                        <span class='numero-etapa'>01</span>
+                        <h3>Informe os dados</h3>
+                        <p>
+                            Registre o material, o peso utilizado e o tempo
+                            estimado de impressão.
+                        </p>
+                    </article>
+
+                    <article class='card'>
+                        <span class='numero-etapa'>02</span>
+                        <h3>Analise os custos</h3>
+                        <p>
+                            Calcule uma estimativa de custo de produção e
+                            avalie os fatores que influenciam o preço.
+                        </p>
+                    </article>
+
+                    <article class='card'>
+                        <span class='numero-etapa'>03</span>
+                        <h3>Planeje o próximo passo</h3>
+                        <p>
+                            Use os resultados para apoiar seus orçamentos e
+                            melhorar o planejamento da produção.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class='secao'>
+            <div class='container'>
+                <div class='chamada'>
+                    <h2>Você sabe quanto custa produzir sua próxima peça?</h2>
+                    <p>
+                        Faça uma simulação e descubra como os dados podem
+                        ajudar no planejamento da sua operação.
+                    </p>
+                    <a class='btn' href='orcamento.html'>Simular um orçamento</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class='rodape'>
+        <div class='container rodape-conteudo'>
+            <div>
+                <a class='logo' href='index.html' style='color: white;'>
+                    Vyxel<span>Core</span>
+                </a>
+                <p>Organização e clareza para a impressão 3D.</p>
+            </div>
+
+            <p>
+                <a href='referencias.html'>Referências e fontes</a>
+            </p>
+
+            <p>
+                &copy; <span id='ano-atual'>2026</span> VyxelCore.
+                Projeto em desenvolvimento.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
