@@ -284,6 +284,15 @@ textarea:focus-visible {
     color: var(--cor-branco);
 }
 
+.rodape .logo,
+.rodape .logo span {
+    color: var(--cor-branco);
+}
+
+.rodape a {
+    color: var(--cor-branco);
+}
+
 .rodape a {
     color: var(--cor-branco);
 }
